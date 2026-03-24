@@ -20,7 +20,7 @@ if [ "$1" != "stop" ]; then
   fi
   
   # Configure network
-  /sbin/ifconfig lo 127.0.0.1
+  /usr/bin/ifconfig lo 127.0.0.1
 
   # You can put other static configuration here:
   #/sbin/ifconfig eth0 192.168.1.38 netmask 255.255.255.0 broadcast 192.168.1.255
