@@ -5,7 +5,7 @@
 
 type = scripted
 command = /sbin/udevd --daemon
-stop-command = /bin/udevadm control -e
+stop-command = /usr/sbin/udevadm control -e
 log-type = buffer
 restart = false
 

@@ -1,5 +1,5 @@
 type = scripted
-command = /bin/udevadm settle
+command = /usr/sbin/udevadm settle
 restart = false
 log-type = buffer
 

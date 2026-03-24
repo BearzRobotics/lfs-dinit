@@ -6,4 +6,3 @@ logfile = /var/log/dhcpcd.log
 restart = false
 
 depends-on: rcboot
-depends-on: netdev-enps3s0
