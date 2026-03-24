@@ -12,15 +12,15 @@ if [ "$1" != "stop" ]; then
   
   # empty utmp, create needed directories
   : > /var/run/utmp
-  mkdir -m og-w /var/run/dbus
-
+  #mkdir -m og-w /var/run/dbus
+  
   # Configure random number generator
   if [ -e /var/state/random-seed ]; then
     cat /var/state/random-seed > /dev/urandom;
   fi
   
   # Configure network
-  /usr/bin/ifconfig lo 127.0.0.1
+  ifconfig lo 127.0.0.1
 
   # You can put other static configuration here:
   #/sbin/ifconfig eth0 192.168.1.38 netmask 255.255.255.0 broadcast 192.168.1.255

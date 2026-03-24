@@ -1,0 +1,4 @@
+type = process
+command = /sbin/agetty --autologin root --noclear ttyS0 115200 linux
+smooth-recovery = true
+depends-on: loginready
