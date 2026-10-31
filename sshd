@@ -1,7 +1,9 @@
+# sshd now needs host keys generated first, and is started on demand rather than at boot.
 type = process
 smooth-recovery = true
 command = /usr/sbin/sshd -D
 
 depends-on: loginready
+depends-on: sshd-keys
 depends-on: rcboot
 waits-for: syslogd
