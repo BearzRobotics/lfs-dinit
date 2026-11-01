@@ -8,6 +8,11 @@ if [ "$1" = start ]; then
 
     # Must have sysfs mounted for udevtrigger to function.
     mount -n -t sysfs sysfs /sys
+
+    # UEFI variables, for efibootmgr. Absent on BIOS machines.
+    if [ -d /sys/firmware/efi/efivars ]; then
+        mount -n -t efivarfs efivarfs /sys/firmware/efi/efivars
+    fi
     
     # Ideally devtmpfs will be mounted by kernel, we can mount here anyway:
     mount -n -t devtmpfs tmpfs /dev
